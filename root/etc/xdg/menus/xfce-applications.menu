@@ -1,0 +1,33 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+  "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Xfce</Name>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+  <DefaultMergeDirs/>
+
+  <Include>
+    <Category>X-Xfce-Toplevel</Category>
+  </Include>
+
+  <Menu>
+   
+
+
+  <Menu>
+    
+  </Menu>
+
+  
+
+  <Layout>
+    <Merge type="menus"/>
+    <Menuname>Other</Menuname>
+    <Separator/>
+    <Menuname>Settings</Menuname>
+    <Separator/>
+    <Merge type="files"/>
+  </Layout>
+</Menu>

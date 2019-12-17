@@ -1,0 +1,817 @@
+/************************************\
+* AUTOMATICALY GENERATED DO NOT EDIT *
+* see man set_polkit_default_privs   *
+\************************************/
+polkit.addRule(function(action, subject) {
+	// set to true for debugging
+	var debug = false;
+        rules = { 
+		'org.freedesktop.udisks.luks-unlock':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.modules.yapi.mailsettings.read':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.udisks.filesystem-check-system-internal':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.gnome.policykit.examples.punch':
+			[ 'no', 'no', 'auth_self_keep' ],
+		'org.freedesktop.ModemManager.Device.Control':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.gnome.gconf.defaults.set-system':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.trigger-offline-update':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.opensuse.yast.modules.yapi.time.read':
+			[ 'no', 'no', 'no' ],
+		'org.kde.kcontrol.kcmkdm.managethemes':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.ata-smart-selftest':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager.Contacts':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.modify-device':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.roles.modify':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.NetworkManager.use-user-connections':
+			[ 'yes', 'yes', 'yes' ],
+		'org.opensuse.yast.roles.assign':
+			[ 'no', 'no', 'no' ],
+		'org.libvirt.api.domain.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.color-manager.modify-device':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.pulseaudio.acquire-high-priority':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.freedesktop.color-manager.install-system-wide':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.logfile.read':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.login1.attach-device':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.scr.registernewagents':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.login1.power-off-multiple-sessions':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.freedesktop.NetworkManager.settings.modify.system':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.encrypted-unlock':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.udisks2.filesystem-unmount-others':
+			[ 'yes' ],
+		'org.freedesktop.login1.inhibit-handle-hibernate-key':
+			[ 'no', 'yes', 'yes' ],
+		'org.freedesktop.RealtimeKit1.acquire-high-priority':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.modules.yapi.firewall.write':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.udisks.filesystem-mount-system-internal':
+			[ 'yes' ],
+		'org.gnome.controlcenter.user-accounts.administration':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.freedesktop.login1.suspend-multiple-sessions':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.kde.powerdevil.backlighthelper.brightnessvalue':
+			[ 'no', 'yes', 'yes' ],
+		'org.freedesktop.udisks2.loop-setup':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.kde.polkitkde1.changeimplicitauthorizations':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks.drive-ata-smart-refresh':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.gnome.settings-daemon.plugins.wacom.wacom-oled-helper':
+			[ 'no', 'no', 'yes' ],
+		'org.freedesktop.udisks2.filesystem-mount-system':
+			[ 'yes' ],
+		'org.freedesktop.login1.reboot-multiple-sessions':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'com.redhat.lvm2.rename-logical-volume':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.package-remove':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.kcontrol.kcmsddm.save':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks.drive-ata-smart-retrieve-historical-data':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.system.patches.install':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.timedate1.set-time':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.cancel-job':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.encrypted-unlock-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.modify-system-configuration':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.opensuse.yast.scr.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.libvirt.api.secret.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'com.redhat.lvm2.create-logical-volume':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.accounts.user-administration':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.kcontrol.k3bsetup.save':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.libvirt.api.interface.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.selinux.setenforce':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.gnome-system-monitor.renice':
+			[ 'no', 'no', 'auth_admin' ],
+		'org.freedesktop.packagekit.cancel-foreign':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.urfkill.blockidx':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'com.ubuntu.pkexec.gufw':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.gnome.policykit.examples.tweak':
+			[ 'no', 'no', 'auth_admin' ],
+		'org.kde.recorditnow.helper.watch':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.hostname1.set-hostname':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.login1.power-off':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.selinux.change_policy_type':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.settings-daemon.plugins.power.backlight-helper':
+			[ 'no', 'no', 'yes' ],
+		'org.freedesktop.NetworkManager.enable-disable-wifi':
+			[ 'yes', 'yes', 'yes' ],
+		'org.freedesktop.consolekit.system.restart-multiple-users':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.freedesktop.login1.inhibit-block-idle':
+			[ 'yes', 'yes', 'yes' ],
+		'org.libvirt.api.connect.search-networks':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.cupspkhelper.mechanism.server-settings':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.encrypted-change-passphrase-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.kde.powerdevil.backlighthelper.setbrightnessvalue':
+			[ 'no', 'no', 'yes' ],
+		'org.freedesktop.ModemManager1.Messaging':
+			[ 'auth_admin', 'auth_admin', 'auth_self_keep' ],
+		'org.freedesktop.upower.qos.set-minimum-latency':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.mate.settingsdaemon.datetimemechanism.settime':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.timedate1.set-timezone':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.opensuse.smpppd.connect':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.freedesktop.consolekit.system.stop':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.opensuse.policykit.netvisix':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.fedoraproject.FirewallD1.info':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'de.berlios.smb4k.mounthelper.unmount':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.rescan':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.libvirt.api.nwfilter.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.libvirt.api.connect.search-node-devices':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.login1.inhibit-handle-power-key':
+			[ 'no', 'yes', 'yes' ],
+		'org.opensuse.yast.modules.yapi.ntp.setserver':
+			[ 'no', 'no', 'no' ],
+		'org.libvirt.api.connect.search-interfaces':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.powerdevil.backlighthelper.brightnessvaluemax':
+			[ 'no', 'yes', 'yes' ],
+		'org.gnome.policykit.examples.twiddle':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.drive-set-spindown':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.udisks2.read-system-configuration-secrets':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.kde.ksysguard.processlisthelper.renice':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.fedoraproject.FirewallD1.all':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.policykit.lockdown':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks.filesystem-unmount-others':
+			[ 'yes' ],
+		'com.redhat.lvm2.resize-logical-volume':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.urfkill.block':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.libvirt.api.connect.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.language.write':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.RealtimeKit1.acquire-real-time':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.udisks2.ata-smart-update':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.consolekit.system.stop-multiple-users':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.packagekit.package-eula-accept':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.kde.powerdevil.backlighthelper.setbrightness':
+			[ 'no', 'no', 'yes' ],
+		'org.gnome.gconf.defaults.set-mandatory':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.policykit.examples.jump':
+			[ 'no', 'no', 'auth_self' ],
+		'org.opensuse.yast.modules.yapi.time.write':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.packagekit.package-install-untrusted':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.urfkill.unblock':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.cupspkhelper.mechanism.printeraddremove':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.filesystem-lsof':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'com.redhat.lvm2.deactivate-logical-volume':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.eject-media-other-seat':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.libvirt.api.node-device.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.libvirt.api.connect.search-domains':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.login1.suspend-ignore-inhibit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.libvirt.api.domain.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.selinux.change_default_policy':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.cancel-job-other-user':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.upgrade-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.gnome.policykit.examples.toggle':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.package-install':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.systemd1.reply-password':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks.drive-eject':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.accounts.change-own-user-data':
+			[ 'yes', 'yes', 'yes' ],
+		'org.freedesktop.ModemManager1.USSD':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.polkitkde1.changesystemconfiguration':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.opensuse.yast.system.terminal.read':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.modules.yapi.users.usermodify':
+			[ 'no', 'no', 'no' ],
+		'org.gnome.policykit.examples.kick-foo':
+			[ 'no', 'no', 'auth_self' ],
+		'org.freedesktop.ModemManager.Location':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.NetworkManager.settings.modify.own':
+			[ 'yes', 'yes', 'yes' ],
+		'org.opensuse.yast.scr.unregisterallagents':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.permissions.read':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.color-manager.create-device':
+			[ 'no', 'no', 'yes' ],
+		'org.gnome.policykit.examples.kick-baz':
+			[ 'no', 'no', 'auth_self' ],
+		'org.freedesktop.systemd1.bus-access':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.urfkill.enablekeycontrol':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.module-manager.lock':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.fedoraproject.FirewallD1.direct.info':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.eject-media-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.opensuse.yast.system.packages.read':
+			[ 'no', 'no', 'no' ],
+		'de.berlios.smb4k.mounthelper.mount':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.users.groupsget':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.modules.yapi.kerberos.write':
+			[ 'no', 'no', 'no' ],
+		'org.mate.power.backlight-helper':
+			[ 'no', 'no', 'yes' ],
+		'org.opensuse.cupspkhelper.mechanism.printer-remote-edit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager.SMS':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.filesystem-mount-other-seat':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.opensuse.yast.permissions.write':
+			[ 'no', 'no', 'no' ],
+		'org.selinux.config.pkexec.run':
+			[ 'no', 'no', 'auth_admin' ],
+		'org.opensuse.yast.modules.yapi.users.userget':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.policykit.example.pkexec.run-frobnicate':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks2.encrypted-unlock-crypttab':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.manage-swapspace':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.realmd.deconfigure-realm':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.upower.qos.cancel-request':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.libvirt.api.storage-vol.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.firewall.read':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.modules.yapi.users.userdelete':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.urfkill.unblockidx':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.modules.yapi.users.groupdelete':
+			[ 'no', 'no', 'no' ],
+		'org.kde.ksysguard.processlisthelper.changecpuscheduler':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.login1.reboot-ignore-inhibit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'com.redhat.lvm2.delete-volume-group':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.activedirectory.read':
+			[ 'no', 'no', 'no' ],
+		'org.kde.kalarmrtcwake.settimer':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.scr.unregisteragent':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.consolekit.system.restart':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.selinux.relabel_on_boot':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.NetworkManager.enable-disable-wimax':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.udisks.linux-lvm2':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.ata-standby':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.debian.pcsc-lite.access_card':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.scr.registeragent':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager1.Location':
+			[ 'auth_admin', 'auth_admin', 'auth_self_keep' ],
+		'org.libvirt.api.storage-vol.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.locale1.set-keyboard':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.services.read':
+			[ 'no', 'no', 'no' ],
+		'org.selinux.restorecon':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager.USSD':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'com.redhat.lvm2.rename-volume-group':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.realmd.login-policy':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.login1.inhibit-handle-suspend-key':
+			[ 'no', 'yes', 'yes' ],
+		'org.kde.kcontrol.kcmremotewidgets.save':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.gnome.randr.install-system-wide':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.libvirt.api.network.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.scr.unmountagent':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.controlcenter.datetime.configure':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.kde.polkitkde1.changeexplicitauthorizations':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.powerdevil.backlighthelper.brightness':
+			[ 'no', 'yes', 'yes' ],
+		'org.opensuse.yast.modules.yapi.users.groupadd':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.system.status.writelimits':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.cupspkhelper.mechanism.devices-get':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.login1.inhibit-delay-sleep':
+			[ 'yes', 'yes', 'yes' ],
+		'org.freedesktop.NetworkManager.network-control':
+			[ 'yes', 'yes', 'yes' ],
+		'org.libvirt.api.interface.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.system.repositories.read':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.backupmanager.schedule':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.kde.kcontrol.kcmkdm.managefaces':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.libvirt.api.network.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.kcontrol.kcmlightdm.savethemedetails':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.freedesktop.NetworkManager.settings.modify.hostname':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.opensuse.yast.system.repositories.write':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.udisks2.power-off-drive-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.locale1.set-locale':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.luks-lock-others':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.libvirt.api.connect.search-secrets':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.cupspkhelper.mechanism.class-edit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.users.groupmodify':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.scr.error':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.mate.settingsdaemon.datetimemechanism.settimezone':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.powerdevil.backlighthelper.syspath':
+			[ 'no', 'yes', 'yes' ],
+		'org.freedesktop.udisks2.eject-media':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'com.hp.driveguard.install-setup':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.libvirt.unix.monitor':
+			[ 'yes', 'yes', 'yes' ],
+		'org.freedesktop.color-manager.create-profile':
+			[ 'no', 'no', 'yes' ],
+		'org.kde.ksysguard.processlisthelper.sendsignal':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.opensuse.yast.modules.ysr.setregistrationconfig':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.system-sources-refresh':
+			[ 'auth_admin_keep', 'no', 'yes' ],
+		'org.freedesktop.login1.reboot':
+			[ 'yes' ],
+		'org.libvirt.api.storage-pool.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.selinux.customized':
+			[ 'no', 'no', 'yes' ],
+		'org.freedesktop.policykit.grant':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.kcontrol.kcmkdm.save':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks.change':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.zoneswitcher.control':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.freedesktop.systemd1.manage-units':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.login1.hibernate':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.freedesktop.login1.suspend':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.freedesktop.udisks2.ata-smart-simulate':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.open-device-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.login1.hibernate-ignore-inhibit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.kerberos.read':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.udisks2.ata-standby-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.policykit.exec':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.hostname1.set-machine-info':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.libvirt.unix.manage':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.cupspkhelper.mechanism.printer-local-edit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.inhibit-polling':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.timedate1.set-ntp':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.users.useradd':
+			[ 'no', 'no', 'no' ],
+		'org.libvirt.api.storage-pool.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.urfkill.flight_mode':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.packagekit.device-rebind':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.policykit.revoke':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.network-manager-settings.system.modify':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.services.execute':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.modules.yapi.network.read':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.modules.yapi.administrator.read':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.udisks2.modify-device-other-seat':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.systemd1.reload-daemon':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.upower.qos.request-latency':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.gnome.policykit.examples.frobnicate':
+			[ 'no', 'no', 'auth_self' ],
+		'org.opensuse.cupspkhelper.mechanism.printer-set-default':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager1.Firmware':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks2.filesystem-fstab':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.system-network-proxy-configure':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.settingsdaemon.datetimemechanism.configure':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.scr.write':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.login1.power-off-ignore-inhibit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager1.Contacts':
+			[ 'auth_admin', 'auth_admin', 'auth_self_keep' ],
+		'org.selinux.semodule_list':
+			[ 'no', 'no', 'yes' ],
+		'org.freedesktop.network-manager-settings.system.wifi.share.open':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.libvirt.api.connect.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.hostname1.set-static-hostname':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.gnome.controlcenter.remote-login-helper':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.package-downgrade':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.ata-standby-other-seat':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.login1.set-user-linger':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.NetworkManager.wifi.share.protected':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'com.redhat.lvm2.delete-logical-volume':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.MultiWriter.probe':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.system-change-install-root':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.fedoraproject.FirewallD1.policies':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.network-manager-settings.system.hostname.modify':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.policykit.examples.kick-bar':
+			[ 'no', 'no', 'auth_self' ],
+		'org.libvirt.api.secret.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.fedoraproject.FirewallD1.policies.info':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.encrypted-lock-others':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.kde.kcontrol.kcmclock.save':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.opensuse.cupspkhelper.mechanism.printer-enable':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.libvirt.api.connect.search-storage-pools':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.administrator.write':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.modules.yapi.network.write':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.modules.ysr.getregistrationconfig':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.fedoraproject.FirewallD1.direct':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.activedirectory.write':
+			[ 'no', 'no', 'no' ],
+		'org.mate.randr.install-system-wide':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.modify-device-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.login1.hibernate-multiple-sessions':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.realmd.configure-realm':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.login1.inhibit-block-shutdown':
+			[ 'no', 'yes', 'yes' ],
+		'org.kde.kcontrol.kcmlightdm.save':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.freedesktop.policykit.read':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.drive-ata-smart-selftest':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.systemd1.manage-unit-files':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.accounts.set-login-option':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.opensuse.yast.scr.dir':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager1.Control':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.opensuse.cupspkhelper.mechanism.job-edit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.login1.flush-devices':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.filesystem-mount':
+			[ 'yes' ],
+		'org.freedesktop.udisks2.ata-secure-erase':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.ldap.read':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.packagekit.system-update':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.opensuse.yast.modules.yapi.users.groupget':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.system.patches.read':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.login1.inhibit-delay-shutdown':
+			[ 'yes', 'yes', 'yes' ],
+		'org.freedesktop.udisks2.encrypted-unlock-other-seat':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.opensuse.yast.system.status.read':
+			[ 'no', 'no', 'no' ],
+		'net.reactivated.fprint.device.enroll':
+			[ 'no', 'no', 'yes' ],
+		'org.opensuse.yast.system.power-management.reboot':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.color-manager.delete-device':
+			[ 'no', 'no', 'yes' ],
+		'org.opensuse.cupspkhelper.mechanism.job-not-owned-edit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.eulas.accept':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.color-manager.modify-profile':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.upower.qos.request-latency-persistent':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.kde.ksysguard.processlisthelper.changeioscheduler':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.fedoraproject.FirewallD1.config.info':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.color-manager.delete-profile':
+			[ 'no', 'no', 'yes' ],
+		'org.freedesktop.policykit.modify-defaults':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.cancel-job-others':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.packagekit.system-trust-signing-key':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.packagekit.repair-system':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.mate.settingsdaemon.datetimemechanism.configurehwclock':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.ysr.statelessregister':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.manage-md-raid':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.NetworkManager.sleep-wake':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.kde.baloo.filewatch.raiselimit':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'com.hp.driveguard.toggle':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.packagekit.system-rollback':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.filesystem-check':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.system.power-management.shutdown':
+			[ 'no', 'no', 'no' ],
+		'org.opensuse.yast.scr.execute':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.ata-smart-enable-disable':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.libvirt.api.connect.search-nwfilters':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.filesystem-mount':
+			[ 'yes' ],
+		'org.freedesktop.ModemManager.Device.Info':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.kde.nepomuk.filewatch.raiselimit':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'com.redhat.lvm2.activate-logical-volume':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.ntp.synchronize':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.NetworkManager.enable-disable-network':
+			[ 'yes', 'yes', 'yes' ],
+		'org.freedesktop.udisks.linux-md':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.fedoraproject.FirewallD1.config':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.ata-check-power':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.package-reinstall':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.color-manager.sensor-lock':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.yast.module-manager.import':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.color-manager.device-inhibit':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.cupspkhelper.mechanism.all-edit':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.mailsettings.write':
+			[ 'no', 'no', 'no' ],
+		'org.freedesktop.udisks2.loop-modify-others':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.pulseaudio.acquire-real-time':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.kde.kcontrol.kcmkwallet.save':
+			[ 'no', 'no', 'auth_self_keep' ],
+		'org.freedesktop.udisks.filesystem-lsof-system-internal':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.clear-offline-update':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'yes' ],
+		'org.opensuse.yast.modules.yapi.ldap.write':
+			[ 'no', 'no', 'no' ],
+		'org.debian.pcsc-lite.access_pcsc':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.udisks2.loop-delete-others':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.packagekit.system-sources-configure':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.selinux.semanage':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.drive-detach':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.login1.inhibit-block-sleep':
+			[ 'no', 'yes', 'yes' ],
+		'org.opensuse.yast.modules.yapi.language.read':
+			[ 'no', 'no', 'no' ],
+		'com.redhat.lvm2.manage-lvm':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks.change-system-internal':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.upower.hibernate':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'net.reactivated.fprint.device.setusername':
+			[ 'no', 'no', 'auth_admin_keep' ],
+		'org.freedesktop.timedate1.set-local-rtc':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.kde.fontinst.manage':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.ModemManager1.Device.Control':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.NetworkManager.enable-disable-wwan':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.freedesktop.login1.inhibit-handle-lid-switch':
+			[ 'no', 'yes', 'yes' ],
+		'org.freedesktop.network-manager-settings.system.wifi.share.protected':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.udisks2.power-off-drive-other-seat':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'com.redhat.lvm2.snapshot-logical-volume':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.open-device':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.opensuse.yast.modules.yapi.users.usersget':
+			[ 'no', 'no', 'no' ],
+		'com.redhat.lvm2.create-volume-group':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.NetworkManager.wifi.share.open':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.kde.polkitkde1.readauthorizations':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.gnome.settings-daemon.plugins.wacom.wacom-led-helper':
+			[ 'no', 'no', 'yes' ],
+		'org.kde.powerdevil.backlighthelper.brightnessmax':
+			[ 'no', 'yes', 'yes' ],
+		'org.gnome.gnome-system-monitor.kill':
+			[ 'no', 'no', 'auth_admin' ],
+		'org.freedesktop.udisks2.power-off-drive':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.opensuse.policykit.gparted':
+			[ 'auth_admin', 'auth_admin', 'auth_admin' ],
+		'org.freedesktop.upower.suspend':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'org.xfce.power.backlight-helper':
+			[ 'no', 'no', 'yes' ],
+		'org.libvirt.api.nwfilter.getattr':
+			[ 'auth_admin_keep', 'auth_admin_keep', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.modify-drive-settings':
+			[ 'auth_admin', 'auth_admin', 'auth_admin_keep' ],
+		'org.freedesktop.udisks2.encrypted-change-passphrase':
+			[ 'auth_admin', 'auth_admin', 'yes' ],
+		'net.reactivated.fprint.device.verify':
+			[ 'no', 'no', 'yes' ],
+        };
+        var i = 0;
+        if (subject.local) {
+                if (subject.active) {
+                        i = 2;
+                } else {
+                        i = 1;
+                }   
+        }   
+	if (debug)
+		polkit.log(subject);
+
+        if (rules[action.id]) {
+		if (debug)
+			polkit.log(action.id + " => " + rules[action.id][i]);
+                return rules[action.id][i];
+        } else {
+		if (debug)
+			polkit.log(action.id + " => no override found");
+	}
+});
+
+// vim: syntax=javascript

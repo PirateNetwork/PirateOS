@@ -1,0 +1,106 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Settings</Name>
+
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+  <DefaultMergeDirs/>
+
+  <Menu>
+    <Name>Personal</Name>
+    <Directory>xfce-personal.directory</Directory>
+    <Include>
+      <Or>
+        <And>
+          <Category>Settings</Category>
+          <Category>X-XFCE-SettingsDialog</Category>
+          <Category>X-XFCE-PersonalSettings</Category>
+        </And>
+        <And>
+          <Category>Settings</Category>
+          <Category>DesktopSettings</Category>
+          <Not>
+            <Category>X-XFCE-HardwareSettings</Category>
+            <Category>X-XFCE-SystemSettings</Category>
+          </Not>
+        </And>
+      </Or>
+    </Include>
+    <Exclude>
+      <Filename>xfce-settings-manager.desktop</Filename>
+    </Exclude>
+  </Menu>
+
+  <Menu>
+    <Name>Hardware</Name>
+    <Directory>xfce-hardware.directory</Directory>
+    <Include>
+      <Or>
+        <And>
+          <Category>Settings</Category>
+          <Category>X-XFCE-SettingsDialog</Category>
+          <Category>X-XFCE-HardwareSettings</Category>
+        </And>
+        <And>
+          <Category>Settings</Category>
+          <Category>HardwareSettings</Category>
+          <Not>
+            <Category>X-XFCE-PersonalSettings</Category>
+            <Category>X-XFCE-SystemSettings</Category>
+          </Not>
+        </And>
+      </Or>
+    </Include>
+  </Menu>
+
+  <Menu>
+    <Name>System</Name>
+    <Directory>xfce-system.directory</Directory>
+    <Include>
+      <Or>
+        <And>
+          <Category>Settings</Category>
+          <Category>X-XFCE-SettingsDialog</Category>
+          <Category>X-XFCE-SystemSettings</Category>
+        </And>
+        <And>
+          <Category>Settings</Category>
+          <Category>System</Category>
+          <Not>
+            <Or>
+              <Category>X-XFCE-PersonalSettings</Category>
+              <Category>X-XFCE-HardwareSettings</Category>
+              <Category>HardwareSettings</Category>
+              <Category>DesktopSettings</Category>
+              <Category>X-SuSE-YaST</Category>
+            </Or>
+          </Not>
+        </And>
+        <Category>PackageManager</Category>
+      </Or>
+    </Include>
+  </Menu>
+
+  <Menu>
+    <Name>Other</Name>
+    <Directory>xfce-other.directory</Directory>
+    <OnlyUnallocated/>
+    <Include>
+      <Category>Settings</Category>
+    </Include>
+    <Exclude>
+      <Filename>xfce-settings-manager.desktop</Filename>
+      <Category>X-SuSE-YaST</Category>
+    </Exclude>
+  </Menu>
+
+  <Layout>
+    <Menuname>Personal</Menuname>
+    <Menuname>Hardware</Menuname>
+    <Menuname>System</Menuname>
+    <Menuname>Other</Menuname>
+    <Merge type="menus"/>
+  </Layout>
+</Menu>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-power-manager" version="1.0">
+  <property name="xfce4-power-manager" type="empty">
+    <property name="brightness-level-on-ac" type="empty"/>
+    <property name="brightness-level-on-battery" type="empty"/>
+    <property name="brightness-on-ac" type="empty"/>
+    <property name="brightness-on-battery" type="empty"/>
+    <property name="critical-power-action" type="empty"/>
+    <property name="critical-power-level" type="uint" value="2"/>
+    <property name="dpms-enabled" type="bool" value="false"/>
+    <property name="dpms-on-ac-off" type="uint" value="11"/>
+    <property name="dpms-on-ac-sleep" type="empty"/>
+    <property name="dpms-on-battery-off" type="empty"/>
+    <property name="dpms-on-battery-sleep" type="empty"/>
+    <property name="general-notification" type="empty"/>
+    <property name="hibernate-button-action" type="empty"/>
+    <property name="inactivity-on-ac" type="empty"/>
+    <property name="inactivity-on-battery" type="uint" value="14"/>
+    <property name="inactivity-sleep-mode" type="empty"/>
+    <property name="lid-action-on-ac" type="empty"/>
+    <property name="lid-action-on-battery" type="empty"/>
+    <property name="lock-screen-suspend-hibernate" type="empty"/>
+    <property name="network-manager-sleep" type="empty"/>
+    <property name="power-button-action" type="empty"/>
+    <property name="sleep-button-action" type="empty"/>
+    <property name="spin-down-hdd" type="empty"/>
+    <property name="spin-down-on-ac-timeout" type="empty"/>
+    <property name="spin-down-on-battery-timeout" type="empty"/>
+    <property name="brightness-switch-restore-on-exit" type="int" value="0"/>
+    <property name="brightness-switch" type="int" value="0"/>
+    <property name="inactivity-sleep-mode-on-battery" type="uint" value="1"/>
+  </property>
+</channel>

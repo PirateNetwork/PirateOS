@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=Disable Right Click
+Comment=Disable Right Click
+Exec=xmodmap -e "pointer = 1 2 99"
+StartupNotify=false
+Terminal=false
+Hidden=false
+

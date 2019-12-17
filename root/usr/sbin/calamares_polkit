@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $(which pkexec) ]; then
+	pkexec --disable-internal-agent "/usr/bin/calamares" "$@"
+else
+	/usr/bin/calamares "$@"
+fi
+
+

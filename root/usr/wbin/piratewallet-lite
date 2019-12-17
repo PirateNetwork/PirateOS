@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $(which pkexec) ]; then
+	pkexec --disable-internal-agent "/usr/bin/piratewallet-lite" "$@"
+else
+	/usr/bin/piratewallet-lite "$@"
+fi
+
+
