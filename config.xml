@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="0.000000000002" name="HappyBirthdayToJesus">
+<image schemaversion="0.1" name="GhostShip">
     <description type="system">
         <author>wieprz1999</author>
         <contact>@tm.wieprz1999</contact>
@@ -10,7 +10,7 @@
     </description>
 
     <preferences>
-        <type image="iso"   luks="pirate" primary="true" flags="overlay" hybrid="true" firmware="uefi" kernelcmdline="quiet splash noirq  apparmor=0" hybridpersistent_filesystem="ext4" hybridpersistent="true" volid="TopSecretOSbetaUnit" mediacheck="false"/>
+        <type image="iso"   primary="true" flags="overlay" hybrid="true" firmware="uefi" kernelcmdline="quiet splash noirq  apparmor=0" hybridpersistent_filesystem="ext4" hybridpersistent="true" volid="TopSecretOSbetaUnit" mediacheck="false"/>
         <version>150.180607.0</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
