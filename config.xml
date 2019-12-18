@@ -10,7 +10,7 @@
     </description>
 
     <preferences>
-        <type image="iso"   luks="pirate" primary="true" flags="overlay" hybrid="true" firmware="uefi" kernelcmdline="quiet splash noirq nomodeset apparmor=0" hybridpersistent_filesystem="ext4" hybridpersistent="true" volid="TopSecretOSbetaUnit" mediacheck="false"/>
+        <type image="iso"   luks="pirate" primary="true" flags="overlay" hybrid="true" firmware="uefi" kernelcmdline="quiet splash noirq  apparmor=0" hybridpersistent_filesystem="ext4" hybridpersistent="true" volid="TopSecretOSbetaUnit" mediacheck="false"/>
         <version>150.180607.0</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
@@ -42,7 +42,7 @@
   </repository>
 
     <packages type="iso">
-        <package name="gfxboot-branding-openSUSE"/>
+        <package name="gfxboot"/>
         <package name="dracut-kiwi-live"/>
     </packages>
 
@@ -59,6 +59,8 @@
 <package name='thunar-volman-branding-openSUSE'/>
 <package name='thunar-plugin-media-tags'/>
 <package name='thunar-volman'/>
+<package name='zenity'/>
+<package name='mupdf'/>
 <package name='thunar-plugin-archive'/>
 <package name='thunar-lang'/>
 <package name='xfdesktop'/>
@@ -338,7 +340,7 @@
 <package name="cups-filters-cups-browsed"/>
 </packages>
 
-<!--<packages type="uninstall">
+<packages type="delete">
  <package name="GeoIP"/>
  <package name="GeoIP-data"/>
 <package name="evolution-data-server"/>
@@ -347,5 +349,5 @@
 <package name="geoclue2"/>
 <package name="geocode-glib"/>
 </packages>
-!-->
+
 </image>

@@ -78,7 +78,7 @@ baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER lightdm
 echo "Storage=volatile" >> /etc/systemd/journald.conf
 
 #======================================
-# GeckoLinux
+# PirateOS
 #--------------------------------------
 rm -R /etc/skel/bin
 rm /usr/share/fonts/truetype/Ubuntu-M.ttf
@@ -94,4 +94,4 @@ chmod 700 /.Trash-999
 # Specific to XFCE
 #--------------------------------------
 rm /usr/share/wallpapers/xfce/default.wallpaper
-ln -s /usr/share/wallpapers/Zwopper-Green-Dew-CC-BY-SA-30-2560x1600.png /usr/share/wallpapers/xfce/default.wallpaper
+ln -s /usr/share/wallpapers/wallpaper1.png /usr/share/wallpapers/xfce/default.wallpaper
