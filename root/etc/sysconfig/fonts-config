@@ -1,0 +1,240 @@
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        integer
+## Default:     0
+## Command:     /usr/sbin/fonts-config
+#
+# Type of output (quiet=0, verbose=1, debug=256) while reconfiguring
+# fonts.
+#
+VERBOSITY="0"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        list(none,hintnone,hintslight,hintmedium,hintfull)
+## Default:     none
+## Command:     /usr/sbin/fonts-config
+#
+#  Prefered common hinting style.
+#  
+#  By default, hinslight is prefered for autohinter and hintfull for
+#  BCI. You can enforce one hintstyle here. This value is not final
+#  though, hintstyle can be overriden by other option in this file
+#  (e. g. FORCE_BW_MONOSPACE => hintfull)
+#
+FORCE_HINTSTYLE="hintslight"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     no
+## Command:     /usr/sbin/fonts-config
+#
+#  Force autohint even for fonts, which are said to have good
+#  hinting instructions.
+#
+FORCE_AUTOHINT="no"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     no
+## Command:     /usr/sbin/fonts-config
+#
+# Force black and white rendering. Fonts will not get smoothed with
+# the benefit of high contrast betwen font and background.
+#
+FORCE_BW="no"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     no
+## Command:     /usr/sbin/fonts-config
+#
+# Force black and white rendering for well hinted monospaced fonts.
+# That makes look them in bitmap quality.
+#
+FORCE_BW_MONOSPACE="no"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        list(lcdnone,lcddefault,lcdlight,lcdlegacy)
+## Default:     lcdnone
+## Command:     /usr/sbin/fonts-config
+#
+# LCD filter.
+#
+# I is mandatory to set to something else than 'lcdnone'
+# when you want subpixel rendering. lcddefault seems to
+# be most used value here.
+#
+USE_LCDFILTER="lcddefault"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        list(none,rgb,vrgb,bgr,vbgr,unknown)
+## Default:     none
+## Command:     /usr/sbin/fonts-config
+#
+# Subpixel arrangement for your monitor and its rotation.
+#
+USE_RGBA="rgb"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     yes
+## Command:     /usr/sbin/fonts-config
+#
+# As rendering of outlines is often not perfect at small sizes, some
+# TrueType or OpenType fonts contain "embedded" bitmaps for small sizes.
+# This is very common in CJK fonts.
+#
+# Using embedded bitmaps usually gives clearly readable results as the bitmaps
+# are handtuned for good readability and do not suffer from imperfections
+# of the rendering algorithms.
+#
+# On the other hand, anti-aliasing is only possible when the outlines
+# are used.
+#
+# Often, using the outlines with anti-aliasing looks more "beautiful".
+# But using the embedded bitmaps is often better readable.
+# It is a matter of taste, decide by yourself which style you prefer.
+#
+USE_EMBEDDED_BITMAPS="yes"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        string
+## Default:     ja:ko:zh-CN:zh-TW:zh-HK:zh-SG
+## Command:     /usr/sbin/fonts-config
+#
+# You can limit the use of embedded bitmaps only to fonts which support certain
+# languages. To do this set this variable to a colon separated list of languages.
+# The spelling of the languages is the same as used by fontconfig.
+# For example, if you want to use embedded bitmaps only in fonts supporting
+# Japanese or simplified Chinese, you can set this variable to "ja:zh-CN".
+# If you want to use embedded bitmaps for *all* languages, set this variable
+# to the empty string "" or to "no".
+#
+EMBEDDED_BITMAPS_LANGUAGES="ja:ko:zh-CN:zh-TW:zh-HK:zh-SG"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        string
+## Default:     ""
+## Command:     /usr/sbin/fonts-config
+#
+# Colon-separated list of prefered sans families. Most prefered family first.
+#
+# Empty string means 'system default'. Following example will convince your
+# system to use CFF fonts (if at least one of them installed). See
+# http://fontinfo.opensuse.org/fontformats.html for details.
+#
+# PREFER_SANS_FAMILIES="Source Sans Pro:CMU Sans Serif:CMU Bright:Linux Biolinum O:Latin Modern Sans"
+#
+# Other example gives the preference to bitmap fonts for various scripts.
+# 
+# PREFER_SANS_FAMILIES="Adobe Helvetica:B&H Lucida:Efont Biwidth:Efont Fixed:Efont Fixed Wide:Arabic Newspaper:Gnu Unifont:WenQuanYi WenQuanYi Bitmap Song"
+#
+PREFER_SANS_FAMILIES=""
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        string
+## Default:     ""
+## Command:     /usr/sbin/fonts-config
+#
+# Colon-separated list of prefered serif families. Most prefered family first.
+#
+# Empty string means 'system default'. Following example will convince your
+# system to use CFF fonts (if at least one of them installed). See
+# http://fontinfo.opensuse.org/fontformats.html for details.
+#
+# PREFER_SERIF_FAMILIES="Source Serif Pro:CMU Serif:CMU Serif Extra:Linux Libertine O:Crimson:Old Standard:Rachana:Latin Modern Roman"
+#
+# Other example gives the preference to bitmap fonts for various scripts.
+# 
+# PREFER_SERIF_FAMILIES="Adobe Times:Adobe New Century Schoolbook:Adobe Utopia:B&H LucidaBright:MUTT ClearlyU Wide:MUTT ClearlyU PUA:MUTT ClearlyU Alternate Glyphs Wide"
+#
+PREFER_SERIF_FAMILIES=""
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        string
+## Default:     ""
+## Command:     /usr/sbin/fonts-config
+#
+# Colon-separated list of prefered sans families. Most prefered family first.
+#
+# Empty string means 'system default'. Following example will convince your
+# system to use CFF fonts (if at least one of them installed). See
+# http://fontinfo.opensuse.org/fontformats.html for details.
+#
+# PREFER_MONO_FAMILIES="Source Code Pro:CMU Typewriter Text:Linux Libertine Mono O:Tempora:Latin Modern Mono:Latin Modern Mono Light"
+#
+# Other example gives the preference to bitmap fonts for various scripts.
+#
+# PREFER_MONO_FAMILIES="Adobe Courier:B&H LucidaTypewriter:Efont Fixed:Efont Fixed Wide:Gnu Unifont Mono:Misc Fixed:Misc Fixed Wide:Schumacher Clean:xos4 Terminus:WenQuanYi WenQuanYi Bitmap Song"
+#
+PREFER_MONO_FAMILIES=""
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     yes
+## Command:     /usr/sbin/fonts-config
+#
+# Perform metric substitutions.
+#
+# When set to yes, value of PREFER_*_FAMILIES can be overriden when document 
+# or GUI is requesting metric compatible font as defined
+#     in /etc/fonts/conf.d/30-metric-aliases.conf,
+# e. g. request to Courier New will get Liberation Mono even if 
+# other family is explicitely prefered by PREFER_MONO_FAMILIES
+# (hint, that's because binding="same" in that fontconfig)
+#
+# You can change this default behaviour with "no", but be careful with that.
+# Metric compatibility means that every glyph, say 'A', has the same width
+# and height in both fonts, so document should have same line wraps for 
+# example.
+#
+SEARCH_METRIC_COMPATIBLE="yes"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     yes
+## Command:     /usr/sbin/fonts-config
+#
+# Strongly prefer of families in FPL.
+#
+# Brute-force preference of families listed in PREFER_*_FAMILIES. This
+# overrides not only other preference lists, but also document (incl. 
+# webfonts) and even _user_ _selection_ of the family.
+#
+# Set to "yes" when you really don't want to see other fonts
+# than listed in preference lists. Other fonts are used only if
+# families from FPLs do not cover requested charset.
+#
+FORCE_FAMILY_PREFERENCE_LISTS="no"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     yes
+#
+# generate TTCap entries in fonts.dir, which can be used by 
+# xtt/freetype font module
+#
+GENERATE_TTCAP_ENTRIES="yes"
+
+## Path:        Desktop
+## Description: Display font configuration
+## Type:        yesno
+## Default:     yes
+#
+# generate font setup for Java 1.4.x and Java 1.5.x
+#
+GENERATE_JAVA_FONT_SETUP="yes"

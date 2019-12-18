@@ -1,0 +1,49 @@
+favorites=YaST.desktop,yast2-packager.desktop,xfce4-terminal.desktop
+recent=xscreensaver-properties.desktop,xfce4-terminal.desktop,xfce-session-settings.desktop,thunar.desktop,thunar-volman-settings.desktop,xfce4-power-manager-settings.desktop
+button-title=Menu
+button-icon=suse
+button-single-row=false
+show-button-title=true
+show-button-icon=true
+launcher-show-name=true
+launcher-show-description=false
+item-icon-size=2
+hover-switch-category=false
+category-icon-size=1
+load-hierarchy=false
+recent-items-max=0
+favorites-in-recent=true
+display-recent-default=false
+position-search-alternate=false
+position-commands-alternate=false
+position-categories-alternate=true
+menu-width=400
+menu-height=500
+menu-opacity=100
+command-settings=xfce4-settings-manager
+show-command-settings=false
+command-lockscreen=light-locker-command -l
+show-command-lockscreen=false
+command-switchuser=gdmflexiserver
+show-command-switchuser=false
+command-logout=xfce4-session-logout
+show-command-logout=false
+command-menueditor=menulibre
+show-command-menueditor=false
+command-profile=mugshot
+show-command-profile=false
+search-actions=2
+
+[action0]
+name=Man Pages
+pattern=#
+command=exo-open --launch TerminalEmulator man %s
+regex=false
+
+[action1
+name=Run in Terminal
+pattern=!
+command=exo-open --launch TerminalEmulator %s
+regex=false
+
+

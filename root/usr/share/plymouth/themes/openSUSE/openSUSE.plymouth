@@ -1,0 +1,10 @@
+[Plymouth Theme]
+Name=openSUSE
+Description=plymouth
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/openSUSE
+ScriptFile=/usr/share/plymouth/themes/openSUSE/openSUSE.script
+
+

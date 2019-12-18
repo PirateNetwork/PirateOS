@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<image schemaversion="0.1" name="GhostShip">
+    <description type="system">
+        <author>wieprz1999</author>
+        <contact>@tm.wieprz1999</contact>
+        <specification>
+            System for arrr
+        </specification>
+    </description>
+
+    <preferences>
+        <type image="iso"   primary="true" flags="overlay" hybrid="true" firmware="uefi" kernelcmdline="quiet splash noirq  apparmor=0" hybridpersistent_filesystem="ext4" hybridpersistent="true" volid="TopSecretOSbetaUnit" mediacheck="false"/>
+        <version>150.180607.0</version>
+        <packagemanager>zypper</packagemanager>
+        <locale>en_US</locale>
+        <keytable>us.map.gz</keytable>
+        <timezone>Europe/Berlin</timezone>
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <bootsplash-theme>openSUSE</bootsplash-theme>
+        <bootloader-theme>openSUSE</bootloader-theme>
+    </preferences>
+
+  <users>
+    <user groups="root" name="root" password="" home="/root"/>
+  </users>
+
+
+
+  <repository type='rpm-md'  imageinclude="true" priority="97">
+    <source path='http://download.opensuse.org/update/leap/15.2/oss/'/>
+  </repository>
+  <repository type='rpm-md'  imageinclude="true" priority="97">
+    <source path='http://download.opensuse.org/update/leap/15.2/non-oss/'/>
+  </repository>
+  <repository type='rpm-md'  imageinclude="true" priority="98">
+    <source path='http://download.opensuse.org/distribution/leap/15.2/repo/oss/'/>
+  </repository>
+  <repository type='yast2'  imageinclude="true" priority="98">
+    <source path='http://download.opensuse.org/distribution/leap/15.2/repo/non-oss/'/>
+  </repository>
+
+    <packages type="iso">
+        <package name="gfxboot"/>
+        <package name="dracut-kiwi-live"/>
+    </packages>
+
+    <packages type="bootstrap">
+        <package name="udev"/>
+        <package name="filesystem"/>
+        <package name="glibc-locale"/>
+        <package name="cracklib-dict-full"/>
+        <package name="ca-certificates"/>
+        <package name="openSUSE-release"/>
+    </packages>
+
+    <packages type="image">
+<package name='thunar-volman-branding-openSUSE'/>
+<package name='thunar-plugin-media-tags'/>
+<package name='thunar-volman'/>
+<package name='zenity'/>
+<package name='mupdf'/>
+<package name='thunar-plugin-archive'/>
+<package name='thunar-lang'/>
+<package name='xfdesktop'/>
+<package name='xfce4-appfinder'/>
+<package name="checkmedia"/>
+<package name="patterns-openSUSE-base"/>
+<package name="plymouth-branding-openSUSE"/>
+<package name="plymouth-dracut"/>
+<package name="grub2-branding-openSUSE"/>
+<package name="ifplugd"/>
+<package name="iputils"/><package name="xf86-video-intel"/>
+<package name="ipw-firmware"/>
+<package name="grub2"/>
+<package name="grub2-x86_64-efi" arch="x86_64"/>
+<package name="grub2-i386-pc"/>
+<package name="syslinux"/>
+<package name="lvm2"/>
+<package name="plymouth"/>
+<package name="fontconfig"/>
+<package name="fonts-config"/>
+<package name="tar"/>
+<package name="parted"/>
+<package name="iproute2"/>
+<package name="less"/>
+<package name="bash-completion"/>
+<package name="dhcp-client"/>
+<package name="which"/>
+<package name="shim"/>
+<package name="kernel-default"/>
+<package name="timezone"/>
+<package name="xhost"/>
+<archive name="livecd-udev.tar.xz"/>
+<package name="kexec-tools"/>
+<package name="mokutil"/>
+<package name="Mesa-dri"/>
+<package name="Mesa-dri-nouveau"/>
+<package name="usbmuxd"/>
+<package name="libva2"/>
+<package name="libva-x11-2"/>
+<package name="libva-drm2"/>
+<package name="libva-wayland2"/>
+<package name="libqt5-qtstyleplugins-platformtheme-gtk2"/>
+<package name="libqt5-qtbase-platformtheme-gtk3"/>
+<!--
+<package name='patterns-openSUSE-minimal_base'/>
+    <package name='patterns-openSUSE-print_server'/>
+    <package name='patterns-yast-x11_yast'/>
+    <package name='patterns-openSUSE-sw_management_gnome'/>
+    <package name='patterns-openSUSE-gnome_yast'/>
+    <package name='patterns-openSUSE-apparmor'/>
+    <package name='patterns-openSUSE-enhanced_base'/>
+    <package name='patterns-openSUSE-enhanced_base_opt'/>
+    <package name='patterns-openSUSE-x11_opt'/>
+    <package name='patterns-fonts-fonts'/>
+    <package name='patterns-yast-yast2_install_wf'/>
+    <package name='patterns-fonts-fonts_opt'/>
+    <package name='patterns-openSUSE-sw_management'/>
+    <package name='patterns-yast-yast2_basis'/>
+    <package name='patterns-openSUSE-x11'/>
+   !
+-->
+<package name="libavdevice57"/>
+<package name="libavcodec57"/>
+<package name="crda"/>
+<package name="lsb-release"/>
+<package name="syslinux"/>
+<package name="xf86-video-sisusb"/>
+<package name="xf86-video-sis"/>
+<package name="calamares"/>
+<package name="gvfs-backend-samba"/>
+<package name="Mesa-dri-nouveau"/>
+<package name="xdm"/>
+<package name="libqt5-qtbase-platformtheme-gtk2"/>
+<package name="python-gtk"/>
+<package name="shim" bootinclude="true"/>
+<package name="grub2"/>
+<package name="grub2-x86_64-efi"/>
+<package name="ModemManager"/>
+<package name="usb_modeswitch"/>
+<package name="grub"/><package name="xf86-video-intel"/>
+<package name="ipw-firmware"/>
+<package name="haveged"/>
+<package name="lightdm-gtk-greeter-lang"/>
+<package name="lightdm-lang"/>
+<package name="light-locker-lang"/>
+<package name="light-locker"/>
+<package name="liblightdm-gobject-1-0"/>
+<package name="lightdm"/>
+<package name="system-config-printer-applet"/>
+<package name="python3-coverage"/>
+<package name="gstreamer-plugins-good-extra"/>
+<package name="dosfstools"/>
+<package name="gstreamer-plugins-bad"/>
+<package name="python-smbc"/>
+<package name="udisks2"/>
+<package name="libmtp9"/>
+<package name="p7zip"/>
+<package name="unrar"/>
+<package name="sane-backends-autoconfig"/>
+<package name="xscreensaver"/>
+<package name="jfsutils"/>
+<package name="xfsprogs"/>
+<package name="ntfs-3g"/>
+<package name="myspell-en_US"/>
+<package name="libgnomesu"/>
+<package name="polkit-gnome"/>
+<package name="mate-icon-theme-faenza-dark"/>
+<package name="libstdc++6-32bit"/>
+<package name="xfwm4-branding-openSUSE"/>
+<package name="xfwm4"/>
+<package name="xfwm4-themes"/>
+  <package name='xfce4-panel-plugin-sntray'/>
+    <package name='xfce4-panel-plugin-multiload-nandhp'/>
+    <package name='xfce4-power-manager-branding-openSUSE'/>
+    <package name='xfce4-panel-plugin-power-manager'/>
+    <package name='xfce4-panel-plugin-whiskermenu'/>
+    <package name='xfce4-panel-plugin-netspeed'/>
+    <package name='libxfce4ui-branding-openSUSE'/>
+    <package name='xfce4-panel-plugin-places'/>
+    <package name='xfce4-icon-theme'/>
+    <package name='xfce4-panel-plugin-mpc'/>
+    <package name='xfce4-panel-plugin-genmon'/>
+    <package name='xfce4-panel-plugin-smartbookmark'/>
+    <package name='xfce4-panel-plugin-xkb'/>
+    <package name='xfce4-panel-plugin-timeout'/>
+    <package name='xfce4-notifyd'/>
+    <package name='xfce4-panel-plugin-fsguard'/>
+    <package name='xfce4-panel-plugin-screenshooter'/>
+    <package name='xfce4-panel-plugin-diskperf'/>
+    <package name='xfce4-panel-plugin-weather'/>
+    <package name='xfce4-panel-plugin-timer'/>
+    <package name='xfce4-panel-plugin-cpufreq'/>
+    <package name='xfce4-panel-plugin-netload'/>
+    <package name='xfce4-panel-plugin-sensors'/>
+    <package name='xfce4-panel-plugin-cpugraph'/>
+    <package name='xfce4-panel-plugin-notes'/>
+    <package name='xfce4-panel-plugin-systemload'/>
+    <package name='xfce4-panel-plugin-datetime'/>
+    <package name='xfce4-power-manager'/>
+    <package name='xfce4-session'/>
+<package name="tumbler"/>
+<package name="evince"/>
+<package name="engrampa"/>
+<package name="galculator"/>
+<package name="xfce4-taskmanager"/>
+<package name="wget"/>
+<package name="xf86-video-nouveau"/>
+<package name="xf86-video-nv"/>
+<package name="xf86-video-ati"/>
+<package name="xorg-x11"/>
+<package name="virtualbox-guest-x11"/>
+<package name="xf86-video-intel"/>
+<package name="ipw-firmware"/>
+<package name="xrandr"/>
+<package name="xkill"/>
+<package name="psmisc"/>
+<package name="rsync"/>
+<package name="isight-firmware-tools"/>
+<package name="crystalhd-firmware"/>
+<package name="zd1211-firmware"/>
+<package name="adaptec-firmware"/>
+<package name="mpt-firmware"/>
+<package name="atmel-firmware"/>
+<package name="ivtv-firmware"/>
+<package name="kernel-firmware"/>
+<package name="alsa-firmware"/>
+<package name="avahi"/>
+<package name="bluez-firmware"/>
+<package name="pulseaudio"/>
+<package name="pavucontrol"/>
+<package name="gvfs-fuse"/>
+<package name="gvfs"/>
+<package name="cups-filters"/>
+<package name="cups-pk-helper"/>
+<package name="gstreamer-plugins-libav"/>
+<package name="gstreamer-plugins-ugly"/>
+<package name="gstreamer-plugins-good"/>
+<package name="gstreamer"/>
+<package name="gstreamer-plugins-base"/>
+<package name="gstreamer-utils"/>
+<package name="epson-inkjet-printer-escpr"/>
+<package name="gutenprint"/>
+<package name="xdg-user-dirs-gtk"/>
+<package name="xdg-user-dirs"/>
+<package name="xf86-input-joystick"/>
+<package name="xf86-input-wacom"/>
+<package name="xf86-input-evdev"/>
+<package name="xf86-input-vmmouse"/>
+<package name="xf86-input-synaptics"/>
+<package name="xf86-input-mouse"/>
+<package name="xf86-video-vmware"/>
+<package name="xf86-input-keyboard"/>
+<package name="sax3"/>
+<package name="e2fsprogs"/>
+<package name="branding-openSUSE"/>
+<package name="iputils"/>
+<package name="kernel-default"/>
+<package name="vim"/>
+<package name="zypper"/>
+<package name="timezone"/>
+<package name="gsettings-backend-dconf"/>
+<package name="glibc"/>
+<package name="glibc-locale"/>
+<package name="ubuntu-fonts"/>
+<package name="dejavu-fonts"/>
+<package name="google-droid-fonts"/>
+<package name="cantarell-fonts"/>
+<package name="libxcb-xf86dri0"/>
+<package name="libibus-1_0-5"/>
+<package name="libiptcdata"/>
+<package name="libiptcdata0"/>
+<package name="libdmx1"/>
+<package name="libcolord-gtk1"/>
+<package name="geocode-glib"/>
+<package name="Mesa-demo-x"/>
+<package name="gdk-pixbuf-loader-rsvg"/>
+<package name="libgeocode-glib0"/>
+<package name="lightdm-gtk-greeter-branding-openSUSE"/>
+<package name="yast2-metapackage-handler"/>
+<package name="lightdm-gtk-greeter"/>
+<package name="gtk3-metatheme-numix"/>
+<package name="gtk2-metatheme-numix"/>
+<package name="gvfs-backends"/>
+<package name="gvfs-backend-afc"/>
+<package name="fuse-exfat"/>
+<package name="exfat-utils"/>
+<package name="nano"/>
+<package name="xorg-x11-server-extra"/>
+<package name="yast2-x11"/>
+<package name="xorg-x11-driver-input"/>
+<package name="xorg-x11-libs"/>
+<package name="xorg-x11-libX11-ccache"/>
+<package name="plymouth-theme-spinner"/>
+<package name="NetworkManager"/>
+<package name="NetworkManager-connection-editor"/>
+<package name="NetworkManager-applet"/>
+<package name="NetworkManager-openvpn"/>
+<package name="NetworkManager-openconnect"/>
+<package name="NetworkManager-openconnect-gnome"/>
+<package name="NetworkManager-strongswan"/>
+<package name="NetworkManager-strongswan-gnome"/>
+<package name="NetworkManager-vpnc"/>
+<package name="NetworkManager-vpnc-gnome"/>
+<package name="NetworkManager-iodine"/>
+<package name="NetworkManager-iodine-gnome"/>
+<package name="NetworkManager-l2tp"/>
+<package name="NetworkManager-l2tp-gnome"/>
+<package name="wireless-tools"/>
+<package name="iw"/>
+<package name="ipw-firmware"/>
+<package name="tlp"/>
+<package name="tlp-rdw"/>
+<package name="virtualbox-guest-tools"/>
+<package name="coreutils"/>
+<package name="yast2-sudo"/>
+<package name="sudo"/>
+<package name="SuSEfirewall2"/>
+<package name="Mesa"/>
+<package name="libglut3"/>
+<package name="xf86-video-fbdev"/>
+<package name="grub2-branding-openSUSE"/>
+<package name="yast2-snapper"/>
+<package name="snapper-zypp-plugin"/>
+<package name="grub2-snapper-plugin"/>
+<package name="cryptsetup"/>
+<package name="ntp"/>
+<package name="yast2-printer"/>
+<package name="udev-configure-printer"/>
+<package name="parallel-printer-support"/>
+<package name="samba-winbind"/>
+<package name="samba"/>
+<package name="ifuse"/>
+<package name="python-imobiledevice"/>
+<package name="imobiledevice-tools"/>
+<package name="poppler-tools"/>
+<package name="cups-backends"/>
+<package name="cups-filters-cups-browsed"/>
+</packages>
+
+<packages type="delete">
+ <package name="GeoIP"/>
+ <package name="GeoIP-data"/>
+<package name="evolution-data-server"/>
+<package name="evolution-data-server-lang"/>
+<package name="exim"/>
+<package name="geoclue2"/>
+<package name="geocode-glib"/>
+</packages>
+
+</image>

@@ -1,0 +1,38 @@
+[Plymouth Theme]
+Name=Spinner
+Description=A theme designed by jimmac that features a simple spinner.
+ModuleName=two-step
+
+[two-step]
+Font=Cantarell 12
+TitleFont=Cantarell Light 30
+ImageDir=/usr/share/plymouth/themes/spinner
+DialogHorizontalAlignment=.5
+DialogVerticalAlignment=.382
+TitleHorizontalAlignment=.5
+TitleVerticalAlignment=.382
+HorizontalAlignment=.5
+VerticalAlignment=.7
+WatermarkHorizontalAlignment=.5
+WatermarkVerticalAlignment=.96
+Transition=none
+TransitionDuration=0.0
+BackgroundStartColor=0x202020
+BackgroundEndColor=0x202020
+ProgressBarBackgroundColor=0x606060
+ProgressBarForegroundColor=0xffffff
+MessageBelowAnimation=true
+
+[updates]
+SuppressMessages=true
+ProgressBarShowPercentComplete=true
+UseProgressBar=true
+_Title=Installing Updates...
+_SubTitle=Do not turn off your computer
+
+[system-upgrade]
+SuppressMessages=true
+ProgressBarShowPercentComplete=true
+UseProgressBar=true
+_Title=Upgrading System...
+_SubTitle=Do not turn off your computer

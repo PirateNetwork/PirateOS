@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xsettings" version="1.0">
+  <property name="Net" type="empty">
+    <property name="ThemeName" type="string" value="Numix"/>
+    <property name="IconThemeName" type="string" value="matefaenzadark"/>
+  </property>
+  <property name="Xft" type="empty">
+    <property name="DPI" type="empty"/>
+    <property name="Antialias" type="empty"/>
+    <property name="Hinting" type="empty"/>
+    <property name="HintStyle" type="string" value="hintslight"/>
+    <property name="RGBA" type="string" value="rgb"/>
+  </property>
+  <property name="Gtk" type="empty">
+    <property name="CursorThemeName" type="empty"/>
+    <property name="DecorationLayout" type="string" value="menu:minimize,maximize,close"/>
+    <property name="FontName" type="string" value="Ubuntu 11"/>
+  </property>
+</channel>
