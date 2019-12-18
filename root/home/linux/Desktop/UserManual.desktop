@@ -1,0 +1,22 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=UserManual
+GenericName=How to use PirateOS
+Keywords=help
+TryExec=UserManual
+Exec=mupdf /usr/bin/manual.pdf
+Comment=PowerOff option
+Icon=/usr/share/applications/manual.icon
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;PackageManager;
+
+
+# Translations
+
+
+# Translations
+Name[ca]=PowerOff
+Icon[ca]=PowerOff
+
