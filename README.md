@@ -10,7 +10,7 @@ thx to Lootz, Draeth, Lynch, Cam, Kaks, and everyone else.
 
 
 PirateOS is fully free to use, opensorce rules !!!
-If you want to donate PirateChain visit https://pirate.black/
+If you want to donate PirateChain visit https://piratechain.com/
 
 Burn it with any tool, like rufus with DD option :)
 
